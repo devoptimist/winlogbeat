@@ -1,1 +1,1 @@
-{{pkg.path}}\bin\winlogbeat.exe -c {{pkg.svc_config_path}}\config\winlogbeat.yml
+{{pkg.path}}\bin\winlogbeat.exe -c {{pkg.svc_config_path}}\winlogbeat.yml

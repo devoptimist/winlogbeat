@@ -1,3 +1,21 @@
-# Use this file to templatize your application's native configuration files.
-# See the docs at https://www.habitat.sh/docs/create-packages-configure/.
-# You can safely delete this file if you don't need it.
+[template]
+number_of_shards = 1
+codec = "best_compression"
+
+
+[dashboards]
+enabled = true
+include = [
+  "Winlogbeat-overview.json"
+]
+
+[kibana]
+enabled = true
+host = "https://127.0.0.1:5601"
+
+[elasticsearch]
+enabled = true
+
+[[elasticsearch.members]]
+host = "localhost"
+port = 9200
