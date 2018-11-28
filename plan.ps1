@@ -13,7 +13,6 @@ $pkg_binds_optional=@{
   "elasticsearch"="http-port"                                                                             
   "logstash"="port"                                                                                       
 }
-
 $pkg_description="Lightweight shipper for windows metrics"
 $pkg_upstream_url="https://www.elastic.co/products/beats/winlogbeat"
 
@@ -22,10 +21,6 @@ Function Invoke-Unpack {
 }   
 
 Function Invoke-Install {
-  echo "pkg_prefix: $pkg_prefix/bin"
-  echo "$HAB_CACHE_SRC_PATH"
-  ls $HAB_CACHE_SRC_PATH
-  ls $HAB_CACHE_SRC_PATH/$pkg_dirname
   Copy-Item * "$pkg_prefix/bin" -Recurse -Force
   mv "$pkg_prefix/bin/winlog*.*/*" "$pkg_prefix/bin/"
 }
